@@ -1,0 +1,14 @@
+.copyright {
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--text-grey);
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  background-color: #f7f7f7;
+}

@@ -1,0 +1,99 @@
+.header {
+  /*yes*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  width: 100%;
+  /*end yes*/
+
+  /*для прилипання хедера до верху сторінки
+      position: fixed;
+    width: 100%;
+  */
+}
+.header-container {
+  /*YES*/
+  display: flex;
+  align-items: center;
+}
+.nav {
+  /*YES*/
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  /*----YES---*/
+  margin-right: 70px;
+
+  animation-duration: 2000ms; /*тривалість*/
+  animation-timing-function: linear; /*розподіл часу для анімації*/
+  animation-delay: 1000ms; /*затримка*/
+  animation-iteration-count: 3; /*повторення*/
+  /*---end YES------*/
+}
+.menu {
+  /*YES*/
+  display: flex;
+  align-items: center;
+}
+.menu-item {
+  /*display: inline-block;*/
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+.menu-link {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--primary-white-color);
+
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--accent-color);
+    opacity: 0;
+    transform: scalex(0.1);
+
+    transition: opacity 250ms linear, transform 250ms linear 50ms;
+  }
+  &:hover::after {
+    /*при ховері для афтер*/
+    opacity: 1;
+    transform: scalex(1);
+  }
+}
+
+.contact-phone-number {
+  /*---YES---*/
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  margin-left: auto;
+  margin-right: 40px;
+  /*---end YES---*/
+
+  color: var(--primary-white-color);
+
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

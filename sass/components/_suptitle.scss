@@ -1,0 +1,34 @@
+.suptitle {
+  /*----YES----*/
+  display: flex;
+  align-items: center;
+
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: var(--primary-text-color);
+  }
+  /*----end YES----*/
+
+  color: var(--primary-text-color);
+}
+.suptitle-theme-dark {
+  /*yes*/
+  color: var(--text-grey);
+
+  &::before {
+    background-color: #9da4bd;
+  }
+  /*yes*/
+}
+.suptitle-theme-light {
+  color: #303030;
+}

@@ -1,0 +1,20 @@
+.backdrop {
+  z-index: 10;
+  /*yes*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(157, 164, 189, 0.5);
+
+  transition: opacity var(--transition), visibility var(--transition);
+  /*end yes*/
+}
+
+.is-hidden {
+  opacity: 0; /*робе елементи прозорими, та інтерактивні елементи можна не зникають*/
+  visibility: hidden; /*цей сховає елементи від мишки та ін.*/
+  pointer-events: none; /*щоб можна було клацнути через бекдроп (невидемий), дозволити пропускати через нього дії*/
+}

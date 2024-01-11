@@ -1,0 +1,33 @@
+.btn {
+  /*---YES---*/
+  border: var(--accent-color) solid 1px;
+  border-radius: 25px;
+  background-color: transparent;
+  padding: 12px 20px;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+  }
+  /*---end YES---*/
+
+  display: block;
+}
+
+.btn-theme-dark {
+  color: var(--primary-white-color);
+}
+.btn-theme-light {
+  color: var(--primary-text-color);
+}

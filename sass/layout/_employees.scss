@@ -1,0 +1,128 @@
+.employees-section {
+  background-color: #f7f7f7;
+}
+
+.employees-title {
+  /*-----YES------*/
+  margin-bottom: 44px;
+  /*---end YES------*/
+}
+.employees-list {
+  /*YES*/
+  /*сітка*/
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+  /*end YES*/
+
+  /*якщо без сітки то достатньо
+   display: flex;
+  justify-content: space-between;
+  */
+}
+.employees-card {
+  /*YES*/
+  /*сітка*/
+  flex-basis: calc((100% - 30px * 3) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+  /*end YES*/
+}
+.employees-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  margin-bottom: 30px;
+
+  &:hover .overlay,
+  &:focus .overlay {
+    transform: translate(0px, 0px);
+  }
+}
+
+/*----*/
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0px, 100%);
+  min-height: 100%;
+  overflow-y: auto; /*для преповнюваного контенту*/
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--primary-text-color);
+  background-color: hsla(189, 40%, 93%, 0.5);
+  padding: 20px;
+
+  transition: transform var(--transition);
+}
+
+.employees-name {
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.39;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  color: var(--primary-text-color);
+}
+
+.employees-position {
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  color: var(--accent-color);
+}
+
+.employees-social-list {
+  /*yes*/
+  display: flex;
+  /*end yes*/
+  /*часто, все що під фото, групують у дів і додють йому падінги, а на ul - space-between*/
+  justify-content: center;
+}
+
+.employees-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.employees-social-link {
+  /*yes*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  fill: var(--primary-text-color);
+
+  transition: fill var(--transition), background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    background-color: var(--text-p);
+  }
+  /*end yes*/
+}
+.icon-social {
+  /*yes*/
+  width: 20px;
+  height: 20px;
+  /*end yes*/
+}
