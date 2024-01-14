@@ -38,9 +38,7 @@
 .hero-title {
   /*yes*/
   font-family: var(--secondary-font);
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 1.18;
+  @include font($fs: 72px, $fw: 700, $lh: 1.18);
   letter-spacing: 0.05em;
   margin-bottom: 20px;
   color: var(--primary-white-color);

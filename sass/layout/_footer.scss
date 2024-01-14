@@ -1,12 +1,12 @@
 .copyright {
-  font-size: 11px;
-  line-height: 1.36;
+  @include font($fw: 600);
   letter-spacing: 0.2em;
   color: var(--text-grey);
 }
 .footer-container {
-  display: flex;
+  @include flex-center-vert;
   justify-content: space-between;
+
   padding-top: 56px;
   padding-bottom: 56px;
 

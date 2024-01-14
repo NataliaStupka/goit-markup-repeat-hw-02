@@ -1,9 +1,7 @@
 .modal {
   /*yes*/
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  @include position;
+
   width: 528px;
   height: 581px;
   background-color: var(--primary-white-color);
@@ -19,9 +17,9 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @include flex-center-vert;
+
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -35,4 +33,10 @@
   &:hover {
     fill: var(--accent-color);
   }
+  &:focus {
+    outline-color: var(--accent-color);
+  }
+}
+.icon-cross {
+  height: 15px;
 }

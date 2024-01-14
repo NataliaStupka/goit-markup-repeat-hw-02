@@ -21,6 +21,25 @@
   overflow: hidden;
 }
 
+/*Text*/
+/*виклик @include font*/
+/*flex*/
+/*center*/
+/*::after, ::before*/
+/*??????*/
+/*
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+*/
 /*Загальні*/
 /*мінімальний скид*/
 h1,
@@ -79,6 +98,7 @@ body {
   background-color: transparent;
   padding: 12px 20px;
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -87,7 +107,6 @@ body {
   transition-duration: 250ms;
   transition-timing-function: linear;
   /*---end YES---*/
-  display: block;
 }
 .btn:hover, .btn:focus {
   color: var(--primary-white-color);
@@ -125,6 +144,7 @@ body {
 
 .media-list-link {
   font-size: 11px;
+  font-weight: 600;
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: var(--primary-text-color);
@@ -156,6 +176,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 11px;
+  font-weight: 600;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -224,8 +245,8 @@ body {
 .modal {
   /*yes*/
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
@@ -241,7 +262,6 @@ body {
   top: 15px;
   right: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 25px;
   height: 25px;
@@ -256,11 +276,18 @@ body {
 .btn-close:hover {
   fill: var(--accent-color);
 }
+.btn-close:focus {
+  outline-color: var(--accent-color);
+}
+
+.icon-cross {
+  height: 15px;
+}
 
 .bd-form-title {
   /*yes*/
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
@@ -278,8 +305,10 @@ body {
 
 .bd-form-label {
   /*yes*/
-  font-size: 14px; /*стилі для тексту які приміняться до "Ім'я", ...*/
+  font-size: 14px;
   font-weight: 400;
+  line-height: 1.36;
+  /*стилі для тексту які приміняться до "Ім'я", ...*/
   margin-bottom: 10px;
   /*end yes*/
 }
@@ -350,16 +379,8 @@ body {
 }
 
 /*створення кастомного checkbox (befor на label(замінить оригінальний checkbox), на checkbox клас visualy-hidden)*/
-.bd-form-checkbox:checked + .bd-form-checkbox-label::before {
-  background-color: var(--accent-color);
-  background-image: url("../imeges/icon-check.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: 1px solid var(--accent-color);
-}
-.bd-form-checkbox:focus + .bd-form-checkbox-label::before {
-  outline: 1px solid var(--accent-color);
+.bd-form-checkbox {
+  /*стандартний чекбокс схований (visually-hidden)*/
 }
 
 .bd-form-checkbox-label {
@@ -378,9 +399,25 @@ body {
   border-radius: 4px;
   margin-right: 7px;
 }
+.bd-form-checkbox:focus + .bd-form-checkbox-label::before {
+  outline: 1px solid var(--accent-color);
+  border-color: transparent;
+}
+.bd-form-checkbox:checked + .bd-form-checkbox-label::before {
+  background-color: var(--accent-color);
+  background-image: url("../imeges/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-color: transparent;
+  outline: none;
+}
 
 .bd-btn {
   margin: 0 auto;
+}
+.bd-btn:focus {
+  outline-color: transparent;
 }
 
 .icon-arrow-up {
@@ -391,8 +428,8 @@ body {
 
 .arrow-up-link {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 60%;
@@ -465,6 +502,7 @@ body {
 .menu-link {
   display: inline-block;
   font-size: 12px;
+  font-weight: 600;
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: var(--primary-white-color);
@@ -492,6 +530,7 @@ body {
 .contact-phone-number {
   /*---YES---*/
   font-size: 12px;
+  font-weight: 600;
   line-height: 1.33;
   letter-spacing: 0.1em;
   margin-left: auto;
@@ -603,11 +642,8 @@ body {
 }
 .services-table-name,
 .services-table-price {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
+  @include font($fs: 18px, $fw: 400, $lh: 1.67);
   letter-spacing: 0.02em;
-
   color: var(--text-grey);
 }
 */
@@ -649,13 +685,13 @@ body {
 
 .services-list-name {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
+  justify-content: space-between;
   flex-grow: 1;
 }
 .services-list-name::after {
-  display: block;
   flex-grow: 1;
+  display: block;
   content: "";
   height: 1px;
   background-color: rgba(157, 164, 189, 0.12);
@@ -664,6 +700,7 @@ body {
 }
 
 .services-btn {
+  display: block;
   margin: 0 auto;
 }
 
@@ -710,6 +747,7 @@ body {
 .advantages-list-quantity span {
   position: absolute;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.38;
   text-align: start;
   color: var(--accent-color);
@@ -717,8 +755,8 @@ body {
 
 .advantages-list-description {
   font-size: 11px;
+  font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 0em;
   text-align: center;
   color: var(--primary-text-color);
 }
@@ -807,10 +845,8 @@ body {
 }
 
 .employees-social-list {
-  /*yes*/
-  display: flex;
-  /*end yes*/
   /*часто, все що під фото, групують у дів і додють йому падінги, а на ul - space-between*/
+  display: flex;
   justify-content: center;
 }
 
@@ -821,8 +857,8 @@ body {
 .employees-social-link {
   /*yes*/
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -855,7 +891,7 @@ body {
   margin-top: -30px;
 }
 
-/*???????????????? calc*/
+/*? calc*/
 .gallery-list-item {
   /* сітка, +мінусові margen у батька*/
   padding-left: 30px;
@@ -896,6 +932,7 @@ body {
 
 .form-label {
   font-size: 11px;
+  font-weight: 600;
   line-height: 1.36;
   letter-spacing: 0.1em;
   color: var(--text-grey);
@@ -911,17 +948,17 @@ body {
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   background-color: transparent;
   font-size: 11px;
+  font-weight: 600;
   line-height: 1.36;
   letter-spacing: 0.1em;
   color: var(--text-grey);
 }
 .form-input:focus {
   font-size: 11px;
+  font-weight: 600;
   line-height: 1.18;
   letter-spacing: 0.1em;
   color: var(--primary-white-color);
-}
-.form-input:focus {
   outline: none;
 }
 .form-input:not(:placeholder-shown):valid {
@@ -937,6 +974,7 @@ body {
   margin-bottom: 44px;
   resize: none;
   font-size: 11px;
+  font-weight: 600;
   line-height: 1.36;
   letter-spacing: 0.1em;
   color: var(--text-grey);
@@ -992,6 +1030,7 @@ body {
 
 .copyright {
   font-size: 11px;
+  font-weight: 600;
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: var(--text-grey);
@@ -999,6 +1038,7 @@ body {
 
 .footer-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-top: 56px;
   padding-bottom: 56px;

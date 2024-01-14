@@ -1,8 +1,7 @@
 .bd-form-title {
   /*yes*/
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.15;
+
+  @include font(18px, 700, 1.15);
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
@@ -17,8 +16,8 @@
 }
 .bd-form-label {
   /*yes*/
-  font-size: 14px; /*стилі для тексту які приміняться до "Ім'я", ...*/
-  font-weight: 400;
+
+  @include font($fs: 14px); /*стилі для тексту які приміняться до "Ім'я", ...*/
   margin-bottom: 10px;
   /*end yes*/
 }
@@ -56,10 +55,9 @@
 .bd-form-icon {
   /*yes*/
   /*display: block;*/
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
+
+  @include position($left: 12px, $transform: translateY(-50%));
+
   width: 18px;
   height: 18px;
   transition: fill var(--transition);
@@ -91,37 +89,47 @@
 
 /*створення кастомного checkbox (befor на label(замінить оригінальний checkbox), на checkbox клас visualy-hidden)*/
 .bd-form-checkbox {
-  &:checked + .bd-form-checkbox-label::before {
-    background-color: var(--accent-color);
-    background-image: url('../imeges/icon-check.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    border: 1px solid var(--accent-color);
-  }
-
-  &:focus + .bd-form-checkbox-label::before {
-    outline: 1px solid var(--accent-color);
-  }
+  /*стандартний чекбокс схований (visually-hidden)*/
 }
+
 .bd-form-checkbox-label {
-  display: flex;
-  align-items: center;
+  @include flex-center-vert;
+
   font-size: 14px;
   color: var(--text-p);
   margin-bottom: 30px;
 
   &::before {
-    display: block;
-    content: '';
+    @include pseudo;
+
     width: 18px;
     height: 18px;
     border: 1px solid grey;
     border-radius: 4px;
     margin-right: 7px;
   }
+
+  .bd-form-checkbox:focus + &::before {
+    outline: 1px solid var(--accent-color);
+    border-color: transparent;
+  }
+  .bd-form-checkbox:checked + &::before {
+    background-color: var(--accent-color);
+    background-image: url('../imeges/icon-check.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    border-color: transparent;
+    outline: none;
+  }
 }
 
 .bd-btn {
   margin: 0 auto;
+
+  &:focus {
+    outline-color: transparent;
+  }
 }

@@ -1,0 +1,51 @@
+/*Text*/
+@mixin font($fs: 11px, $fw: 400, $lh: 1.36) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+/*виклик @include font*/
+
+/*flex*/
+@mixin flex-center($dis: flex, $ai: center, $jc: center) {
+  display: $dis;
+  align-items: $ai;
+  justify-content: $jc;
+}
+@mixin flex-center-vert($dis: flex, $ai: center) {
+  display: $dis;
+  align-items: $ai;
+}
+@mixin flex-center-horiz($dis: flex, $jc: center) {
+  display: $dis;
+  justify-content: $jc;
+}
+
+/*center*/
+@mixin position($position: absolute, $top: 50%, $left: 50%, $transform: translate(-50%, -50%)) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: $transform;
+}
+
+/*::after, ::before*/
+@mixin pseudo($display: block, $content: '') {
+  display: $display;
+  content: $content;
+}
+
+/*??????*/
+/*
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+*/

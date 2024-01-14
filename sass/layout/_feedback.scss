@@ -1,6 +1,7 @@
 .contact-section {
   background-color: #191c26;
   background-image: url(../imeges/contact/contact-bg.png);
+
   background-repeat: no-repeat;
   /*неправильно исправить*/
   background-position: 620px 0;
@@ -22,12 +23,12 @@
 .form-wraper {
   display: flex;
   justify-content: space-around;
+
   width: 100%;
   margin-bottom: 44px;
 }
 .form-label {
-  font-size: 11px;
-  line-height: 1.36;
+  @include font($fw: 600);
   letter-spacing: 0.1em;
   color: var(--text-grey);
 
@@ -42,19 +43,14 @@
   border-bottom: 1px solid #9da4bd66;
   background-color: transparent;
 
-  font-size: 11px;
-  line-height: 1.36;
+  @include font($fw: 600);
   letter-spacing: 0.1em;
   color: var(--text-grey);
 
   &:focus {
-    font-size: 11px;
-    line-height: 1.18;
+    @include font($fw: 600, $lh: 1.18);
     letter-spacing: 0.1em;
     color: var(--primary-white-color);
-  }
-
-  &:focus {
     outline: none;
   }
 
@@ -72,8 +68,7 @@
   margin-bottom: 44px;
   resize: none;
 
-  font-size: 11px;
-  line-height: 1.36;
+  @include font($fw: 600);
   letter-spacing: 0.1em;
   color: var(--text-grey);
 

@@ -5,8 +5,7 @@
   background-color: transparent;
   padding: 12px 20px;
 
-  font-size: 12px;
-  line-height: 1.33;
+  @include font(12px, 400, 1.33);
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
@@ -21,8 +20,6 @@
     background-color: var(--accent-color);
   }
   /*---end YES---*/
-
-  display: block;
 }
 
 .btn-theme-dark {

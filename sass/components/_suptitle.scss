@@ -1,10 +1,8 @@
 .suptitle {
   /*----YES----*/
-  display: flex;
-  align-items: center;
+  @include flex-center-vert;
 
-  font-size: 11px;
-  line-height: 1.36;
+  @include font($fw: 600);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 20px;

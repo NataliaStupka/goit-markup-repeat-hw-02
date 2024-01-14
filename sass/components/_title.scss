@@ -1,9 +1,8 @@
 .section-title {
   /*----YES----*/
   font-family: Raleway;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.17;
+
+  @include font(42px, 700, 1.17);
   letter-spacing: 0.05em;
   margin-bottom: 20px;
   /*----YES----*/

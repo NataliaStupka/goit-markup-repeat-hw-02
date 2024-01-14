@@ -52,9 +52,7 @@
   min-height: 100%;
   overflow-y: auto; /*для преповнюваного контенту*/
 
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.86;
+  @include font(16px, 600, 1.86);
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--primary-text-color);
@@ -67,9 +65,7 @@
 .employees-name {
   margin-bottom: 8px;
 
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.39;
+  @include font(18px, 400, 1.39);
   letter-spacing: 0.02em;
   text-align: center;
 
@@ -79,9 +75,7 @@
 .employees-position {
   margin-bottom: 30px;
 
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.36;
+  @include font($fs: 14px);
   letter-spacing: 0.02em;
   text-align: center;
 
@@ -89,11 +83,8 @@
 }
 
 .employees-social-list {
-  /*yes*/
-  display: flex;
-  /*end yes*/
   /*часто, все що під фото, групують у дів і додють йому падінги, а на ul - space-between*/
-  justify-content: center;
+  @include flex-center-horiz;
 }
 
 .employees-social-item:not(:last-child) {
@@ -102,9 +93,8 @@
 
 .employees-social-link {
   /*yes*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
+
   width: 40px;
   height: 40px;
   border-radius: 50%;

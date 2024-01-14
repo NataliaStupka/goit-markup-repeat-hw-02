@@ -1,14 +1,12 @@
 /*---Instagram, Youtube----*/
 .media-list {
   /*YES*/
-  display: flex;
-  align-items: center;
-
+  @include flex-center-vert;
   /*end YES*/
 
   &::before {
-    display: block;
-    content: '';
+    @include pseudo;
+
     width: 60px;
     height: 1px;
     margin-right: 40px;
@@ -22,8 +20,7 @@
 }
 
 .media-list-link {
-  font-size: 11px;
-  line-height: 1.36;
+  @include font($fw: 600);
   letter-spacing: 0.2em;
 
   color: var(--primary-text-color);
