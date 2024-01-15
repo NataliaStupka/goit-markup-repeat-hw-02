@@ -1,13 +1,13 @@
-.employees-section {
+.employees__section {
   background-color: #f7f7f7;
 }
 
-.employees-title {
+.employees__title {
   /*-----YES------*/
   margin-bottom: 44px;
   /*---end YES------*/
 }
-.employees-list {
+.employees__list {
   /*YES*/
   /*сітка*/
   display: flex;
@@ -21,7 +21,7 @@
   justify-content: space-between;
   */
 }
-.employees-card {
+.employees__card {
   /*YES*/
   /*сітка*/
   flex-basis: calc((100% - 30px * 3) / 3);
@@ -29,7 +29,7 @@
   margin-top: 30px;
   /*end YES*/
 }
-.employees-wrapper {
+.employees__wrapper {
   display: block;
   position: relative;
   overflow: hidden;
@@ -62,7 +62,7 @@
   transition: transform var(--transition);
 }
 
-.employees-name {
+.employees__name {
   margin-bottom: 8px;
 
   @include font(18px, 400, 1.39);
@@ -72,7 +72,7 @@
   color: var(--primary-text-color);
 }
 
-.employees-position {
+.employees__position {
   margin-bottom: 30px;
 
   @include font($fs: 14px);
@@ -82,16 +82,16 @@
   color: var(--accent-color);
 }
 
-.employees-social-list {
+.employees__social-list {
   /*часто, все що під фото, групують у дів і додють йому падінги, а на ul - space-between*/
   @include flex-center-horiz;
 }
 
-.employees-social-item:not(:last-child) {
+.employees__social-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.employees-social-link {
+.employees__social-link {
   /*yes*/
   @include flex-center;
 
@@ -110,7 +110,7 @@
   }
   /*end yes*/
 }
-.icon-social {
+.social__icon {
   /*yes*/
   width: 20px;
   height: 20px;

@@ -1,33 +1,31 @@
-.contact-section {
+.feedback {
   background-color: #191c26;
-  background-image: url(../imeges/contact/contact-bg.png);
-
-  background-repeat: no-repeat;
-  /*неправильно исправить*/
-  background-position: 620px 0;
-  background-size: contain;
 }
-.contact {
+
+.feedback__container {
   display: flex;
 }
 
 /*Contact Form*/
-.contact-form-section {
+.feedback-form {
   width: 640px;
   padding-left: 40px;
+
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
-.form {
+.contact-form {
   width: 560px;
   margin-right: 40px;
 }
-.form-wraper {
+.contact-form__wraper {
   display: flex;
   justify-content: space-around;
 
   width: 100%;
   margin-bottom: 44px;
 }
-.form-label {
+.contact-form__label {
   @include font($fw: 600);
   letter-spacing: 0.1em;
   color: var(--text-grey);
@@ -36,7 +34,7 @@
     margin-right: 30px;
   }
 }
-.form-input {
+.contact-form__input {
   width: 260px;
   height: 24px;
   border: none;
@@ -62,7 +60,7 @@
   }
 }
 
-.form-textarea {
+.contact-form__textarea {
   width: 100%;
   height: 76px;
   margin-bottom: 44px;

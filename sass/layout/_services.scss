@@ -19,12 +19,12 @@
   color: var(--text-grey);
 }
 */
-.services-list-container {
+.services__list-container {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
-.services-list {
+.services__list {
   /*yes*/
   flex-basis: 50%;
   padding: 30px 40px;
@@ -39,7 +39,7 @@
   }
 }
 
-.services-list-item {
+.services__list-item {
   /*yes*/
   display: flex;
   justify-content: space-between;
@@ -56,7 +56,7 @@
   }
 }
 
-.services-list-name {
+.services__list-name {
   @include flex-center($ai: baseline, $jc: space-between);
 
   flex-grow: 1;
@@ -72,7 +72,7 @@
   }
 }
 
-.services-btn {
+.services__btn {
   display: block;
   margin: 0 auto;
 }

@@ -1,7 +1,7 @@
-.gallery-suptitle {
+.gallery__suptitle {
   margin-bottom: 44px;
 }
-.gallery-list {
+.gallery__list {
   display: flex;
   flex-wrap: wrap;
 
@@ -10,7 +10,7 @@
   margin-top: -30px;
 }
 /*? calc*/
-.gallery-list-item {
+.gallery__list-item {
   /* сітка, +мінусові margen у батька*/
   padding-left: 30px;
   padding-top: 30px;

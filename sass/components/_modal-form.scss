@@ -1,4 +1,4 @@
-.bd-form-title {
+.bd-form__title {
   /*yes*/
 
   @include font(18px, 700, 1.15);
@@ -14,18 +14,18 @@
   flex-direction: column;
   /*end yes*/
 }
-.bd-form-label {
+.bd-form__label {
   /*yes*/
 
   @include font($fs: 14px); /*стилі для тексту які приміняться до "Ім'я", ...*/
   margin-bottom: 10px;
   /*end yes*/
 }
-.bd-form-input-wrapper {
+.bd-form__input-wrapper {
   position: relative;
   display: block;
 }
-.bd-form-input {
+.bd-form__input {
   /*yes*/
   width: 100%;
   height: 40px;
@@ -52,7 +52,7 @@
     border-color: red;
   }
 }
-.bd-form-icon {
+.bd-form__icon {
   /*yes*/
   /*display: block;*/
 
@@ -64,7 +64,7 @@
   /*end yes*/
 }
 
-.bd-form-message {
+.bd-form__message {
   /*yes*/
   width: 100%;
   height: 120px;
@@ -88,11 +88,11 @@
 }
 
 /*створення кастомного checkbox (befor на label(замінить оригінальний checkbox), на checkbox клас visualy-hidden)*/
-.bd-form-checkbox {
+.bd-form__checkbox {
   /*стандартний чекбокс схований (visually-hidden)*/
 }
 
-.bd-form-checkbox-label {
+.bd-form__checkbox-label {
   @include flex-center-vert;
 
   font-size: 14px;
@@ -109,11 +109,11 @@
     margin-right: 7px;
   }
 
-  .bd-form-checkbox:focus + &::before {
+  .bd-form__checkbox:focus + &::before {
     outline: 1px solid var(--accent-color);
     border-color: transparent;
   }
-  .bd-form-checkbox:checked + &::before {
+  .bd-form__checkbox:checked + &::before {
     background-color: var(--accent-color);
     background-image: url('../imeges/icon-check.svg');
 
@@ -126,7 +126,7 @@
   }
 }
 
-.bd-btn {
+.bd__btn {
   margin: 0 auto;
 
   &:focus {

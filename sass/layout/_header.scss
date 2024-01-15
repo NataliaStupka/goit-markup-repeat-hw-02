@@ -13,7 +13,7 @@
     width: 100%;
   */
 }
-.header-container {
+.header__container {
   /*YES*/
   @include flex-center-vert;
 }
@@ -22,28 +22,27 @@
   @include flex-center-vert;
 }
 
-.logo {
-  /*----YES---*/
+/*.logo {
+}*/
+.header__logo {
   margin-right: 70px;
-
   animation-duration: 2000ms; /*тривалість*/
   animation-timing-function: linear; /*розподіл часу для анімації*/
   animation-delay: 1000ms; /*затримка*/
   animation-iteration-count: 3; /*повторення*/
-  /*---end YES------*/
 }
 .menu {
   /*YES*/
   @include flex-center-vert;
 }
-.menu-item {
+.menu__item {
   /*display: inline-block;*/
 
   &:not(:last-child) {
     margin-right: 40px;
   }
 }
-.menu-link {
+.menu__link {
   display: inline-block;
 
   @include font($fs: 12px, $fw: 600, $lh: 1.33);
@@ -55,20 +54,17 @@
   &:focus {
     color: var(--accent-color);
   }
-
   &::after {
     @include pseudo;
-
     width: 100%;
     height: 1px;
     background-color: var(--accent-color);
     opacity: 0;
     transform: scalex(0.1);
-
     transition: opacity 250ms linear, transform 250ms linear 50ms;
   }
   &:hover::after {
-    /*при ховері для афтер*/
+    /*при ховері для ::after*/
     opacity: 1;
     transform: scalex(1);
   }

@@ -15,11 +15,11 @@
   }
 }
 
-.media-list-item:not(:last-child) {
+.media-list__item:not(:last-child) {
   margin-right: 40px;
 }
 
-.media-list-link {
+.media-list__link {
   @include font($fw: 600);
   letter-spacing: 0.2em;
 

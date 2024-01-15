@@ -1,9 +1,9 @@
-.hero-container {
+.hero__container {
   /*yes*/
   display: flex;
   /*end yes*/
 }
-.hero-left-side {
+.hero__left-side {
   /*yes*/
   display: flex;
   align-items: flex-end;
@@ -12,7 +12,7 @@
   padding-bottom: 40px;
   /*end yes*/
 }
-.media-list-hero {
+.hero__media-list {
   /*yes*/
   transform-origin: left top; /*стосовно чого здійснюємо обертання*/
   transform: rotate(-90deg) translateX(-18px); /*відмінусоват висоту елементу в неперевернутому стані*/
@@ -20,7 +20,7 @@
   /*end yes*/
 }
 
-.hero-right-side {
+.hero__right-side {
   /*yes*/
   flex-grow: 1; /*щоб зайняло більше місця*/
 
@@ -35,7 +35,7 @@
   background-repeat: no-repeat;
   background-position: right bottom;
 }
-.hero-title {
+.hero__title {
   /*yes*/
   font-family: var(--secondary-font);
   @include font($fs: 72px, $fw: 700, $lh: 1.18);

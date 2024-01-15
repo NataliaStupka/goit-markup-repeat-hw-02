@@ -1,16 +1,17 @@
-.about-container {
+.about__container {
   display: flex;
 }
-.about-gallery {
-  display: flex;
-}
-.about-gallery-item:not(:last-child) {
-  margin-right: 30px;
-}
-.about-left-side {
+.about__left-side {
   margin-right: 64px;
 }
-.about-suptitle {
+.about__gallery {
+  display: flex;
+}
+.about__gallery-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about__suptitle {
   /*для ::before */
   /*align-items: center;
   display: flex;
@@ -21,7 +22,7 @@
   color: var(--primary-text-color);
 }
 
-.about-text {
+.about__text {
   margin-bottom: 40px;
 
   @include font(14px, 400, 1.86);

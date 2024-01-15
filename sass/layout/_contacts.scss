@@ -1,11 +1,18 @@
-.contact-info-section {
+.contact-info {
   width: 610px;
-  margin-left: 100px;
+  padding-left: 100px;
+
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  background-image: url(../imeges/contact/contact-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.contact-section-title {
+.contact-info__title {
   margin-bottom: 40px;
 }
-.contact-list-item {
+.contact-info__item {
   @include flex-center-vert;
 
   margin-bottom: 20px;
@@ -15,20 +22,20 @@
   }
 }
 
-.icon-contact {
+.contact-info__icon {
   width: 24px;
   height: 24px;
   fill: var(--text-grey);
   margin-right: 16px;
 }
 
-.contact-list-link,
-.contact-info-date {
+.contact-info__link,
+.contact-info__date {
   @include font(18px, 400, 1.67);
   letter-spacing: 0.02em;
   color: var(--text-grey);
 }
-.contact-suptitle {
+.contact-info__suptitle {
   margin-bottom: 22px;
   color: var(--primary-white-color);
 }
