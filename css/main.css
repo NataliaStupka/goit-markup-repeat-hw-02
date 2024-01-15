@@ -337,8 +337,14 @@ body {
   /* + селектор першого сусіда зверху*/
   fill: var(--accent-color);
 }
+.bd-form__input:not(:-moz-placeholder-shown):valid {
+  border-color: green;
+}
 .bd-form__input:not(:placeholder-shown):valid {
   border-color: green;
+}
+.bd-form__input:not(:-moz-placeholder-shown):invalid {
+  border-color: red;
 }
 .bd-form__input:not(:placeholder-shown):invalid {
   border-color: red;
@@ -372,6 +378,10 @@ body {
 .bd-form__message:focus {
   outline: none;
   border-color: var(--accent-color);
+}
+.bd-form__message::-moz-placeholder {
+  color: var(--text-grey);
+  text-transform: uppercase;
 }
 .bd-form__message::placeholder {
   color: var(--text-grey);
@@ -958,8 +968,14 @@ body {
   color: var(--primary-white-color);
   outline: none;
 }
+.contact-form__input:not(:-moz-placeholder-shown):valid {
+  border-color: green;
+}
 .contact-form__input:not(:placeholder-shown):valid {
   border-color: green;
+}
+.contact-form__input:not(:-moz-placeholder-shown):invalid {
+  border-color: red;
 }
 .contact-form__input:not(:placeholder-shown):invalid {
   border-color: red;
@@ -978,6 +994,9 @@ body {
   border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   background-color: transparent;
+}
+.contact-form__textarea::-moz-placeholder {
+  text-transform: uppercase;
 }
 .contact-form__textarea::placeholder {
   text-transform: uppercase;
