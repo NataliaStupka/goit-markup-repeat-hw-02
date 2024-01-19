@@ -81,7 +81,7 @@
   }
 
   &::placeholder {
-    color: var(--text-grey);
+    color: var(--primary-text-color-theme-dark);
     text-transform: uppercase;
   }
   /*end yes*/
@@ -96,7 +96,7 @@
   @include flex-center-vert;
 
   font-size: 14px;
-  color: var(--text-p);
+  color: var(--primary-text-color-theme-light);
   margin-bottom: 30px;
 
   &::before {

@@ -47,7 +47,7 @@
 
   @include font($fs: 12px, $fw: 600, $lh: 1.33);
   letter-spacing: 0.1em;
-  color: var(--primary-white-color);
+  color: var(--secondary-text-color-theme-dark);
   transition: color var(--transition);
 
   &:hover,
@@ -78,7 +78,7 @@
   margin-right: 40px;
   /*---end YES---*/
 
-  color: var(--primary-white-color);
+  color: var(--secondary-text-color-theme-dark);
 
   transition: color var(--transition);
 

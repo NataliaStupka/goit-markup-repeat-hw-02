@@ -16,15 +16,15 @@
 
   &:hover,
   &:focus {
-    color: var(--primary-white-color);
+    color: var(--secondary-text-color-theme-dark);
     background-color: var(--accent-color);
   }
   /*---end YES---*/
 }
 
 .btn_theme-dark {
-  color: var(--primary-white-color);
+  color: var(--secondary-text-color-theme-dark);
 }
 .btn_theme-light {
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color-theme-light);
 }

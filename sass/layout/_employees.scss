@@ -55,7 +55,7 @@
   @include font(16px, 600, 1.86);
   letter-spacing: 0.02em;
   text-align: center;
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color-theme-light);
   background-color: hsla(189, 40%, 93%, 0.5);
   padding: 20px;
 
@@ -69,7 +69,7 @@
   letter-spacing: 0.02em;
   text-align: center;
 
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color-theme-light);
 }
 
 .employees__position {
@@ -98,15 +98,15 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--primary-white-color);
-  fill: var(--primary-text-color);
+  background-color: var(--secondary-text-color-theme-dark);
+  fill: var(--secondary-text-color-theme-light);
 
   transition: fill var(--transition), background-color var(--transition);
 
   &:hover,
   &:focus {
     fill: var(--accent-color);
-    background-color: var(--text-p);
+    background-color: var(--primary-text-color-theme-light);
   }
   /*end yes*/
 }

@@ -12,15 +12,15 @@
     width: 60px;
     height: 1px;
     margin-right: 20px;
-    background-color: var(--primary-text-color);
+    background-color: var(--secondary-text-color-theme-light);
   }
   /*----end YES----*/
 
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color-theme-light);
 }
 .suptitle_theme-dark {
   /*yes*/
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-dark);
 
   &::before {
     background-color: #9da4bd;

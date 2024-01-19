@@ -28,7 +28,7 @@
 .contact-form__label {
   @include font($fw: 600);
   letter-spacing: 0.1em;
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-light);
 
   &:not(:last-child) {
     margin-right: 30px;
@@ -43,12 +43,12 @@
 
   @include font($fw: 600);
   letter-spacing: 0.1em;
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-dark);
 
   &:focus {
     @include font($fw: 600, $lh: 1.18);
     letter-spacing: 0.1em;
-    color: var(--primary-white-color);
+    color: var(--secondary-text-color-theme-dark);
     outline: none;
   }
 
@@ -68,7 +68,7 @@
 
   @include font($fw: 600);
   letter-spacing: 0.1em;
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-dark);
 
   border: none;
   border-bottom: 1px solid #9da4bd66;

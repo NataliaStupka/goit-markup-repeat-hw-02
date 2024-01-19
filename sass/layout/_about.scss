@@ -19,7 +19,7 @@
 
   line-height: 1.18;
 
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color-theme-light);
 }
 
 .about__text {
@@ -28,5 +28,5 @@
   @include font(14px, 400, 1.86);
   letter-spacing: 0.02em;
 
-  color: var(--text-p);
+  color: var(--primary-text-color-theme-light);
 }

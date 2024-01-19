@@ -25,7 +25,7 @@
 .contact-info__icon {
   width: 24px;
   height: 24px;
-  fill: var(--text-grey);
+  fill: var(--primary-text-color-theme-dark);
   margin-right: 16px;
 }
 
@@ -33,9 +33,9 @@
 .contact-info__date {
   @include font(18px, 400, 1.67);
   letter-spacing: 0.02em;
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-dark);
 }
 .contact-info__suptitle {
   margin-bottom: 22px;
-  color: var(--primary-white-color);
+  color: var(--secondary-text-color-theme-dark);
 }

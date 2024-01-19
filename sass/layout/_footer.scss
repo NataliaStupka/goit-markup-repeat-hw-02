@@ -11,5 +11,5 @@
 .copyright {
   @include font($fw: 600);
   letter-spacing: 0.2em;
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-dark);
 }

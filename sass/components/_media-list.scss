@@ -10,7 +10,7 @@
     width: 60px;
     height: 1px;
     margin-right: 40px;
-    background: var(--primary-text-color);
+    background: var(--secondary-text-color-theme-light);
     flex-shrink: 0;
   }
 }
@@ -23,7 +23,7 @@
   @include font($fw: 600);
   letter-spacing: 0.2em;
 
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color-theme-light);
 
   transition: color var(--transition);
 

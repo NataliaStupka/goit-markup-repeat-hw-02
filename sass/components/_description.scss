@@ -2,7 +2,7 @@
   /*---YES----*/
   @include font($fs: 18px, $lh: 1.67);
   letter-spacing: 0.02em;
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-dark);
   /*---YES----*/
 }
 
@@ -10,5 +10,5 @@
   margin-bottom: 20px;
 }
 .section-description_light {
-  color: var(--text-p);
+  color: var(--primary-text-color-theme-light);
 }

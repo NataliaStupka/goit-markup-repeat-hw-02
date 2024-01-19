@@ -16,7 +16,7 @@
 .services-table-price {
   @include font($fs: 18px, $fw: 400, $lh: 1.67);
   letter-spacing: 0.02em;
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-dark);
 }
 */
 .services__list-container {
@@ -28,7 +28,7 @@
   /*yes*/
   flex-basis: 50%;
   padding: 30px 40px;
-  /*border: 1px solid var(--primary-text-color);*/
+  /*border: 1px solid var(--secondary-text-color-theme-light);*/
   /*end yes*/
 
   &:nth-child(2n + 1) {
@@ -49,7 +49,7 @@
 
   @include font($fs: 18px, $fw: 400, $lh: 1.67);
   letter-spacing: 0.02em;
-  color: var(--text-grey);
+  color: var(--primary-text-color-theme-dark);
 
   &:nth-child(1) {
     padding-top: 0;

@@ -27,7 +27,7 @@
   padding-top: 272px; /*з урахуванням хедеру, що вийнятий з потоку*/
   padding-bottom: 206px;
   padding-left: 100px;
-  background-color: var(--primary-text-color);
+  background-color: var(--secondary-text-color-theme-light);
   background-image: linear-gradient(#26191b33, #191c2633), url(../imeges/hero/hero-img\ 3.jpg);
   background-size: cover;
   /*end yes*/
@@ -41,6 +41,6 @@
   @include font($fs: 72px, $fw: 700, $lh: 1.18);
   letter-spacing: 0.05em;
   margin-bottom: 20px;
-  color: var(--primary-white-color);
+  color: var(--secondary-text-color-theme-dark);
   /*end yes*/
 }
